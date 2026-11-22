@@ -1,0 +1,157 @@
+{
+  "status": "diagnostico_arquivo_original",
+  "arquivo": "BASE DE DADOS PEDE 2024 - DATATHON.xlsx",
+  "abas": {
+    "2022": {
+      "linhas": 860,
+      "colunas": 42,
+      "ra_unicos": 860,
+      "ra_duplicados": 0,
+      "inde_numerico": 860,
+      "inde_nao_numerico": 0,
+      "cabecalhos_duplicados": {}
+    },
+    "2023": {
+      "linhas": 1014,
+      "colunas": 48,
+      "ra_unicos": 1014,
+      "ra_duplicados": 0,
+      "inde_numerico": 931,
+      "inde_nao_numerico": 83,
+      "cabecalhos_duplicados": {
+        "Destaque IPV": 2
+      }
+    },
+    "2024": {
+      "linhas": 1156,
+      "colunas": 50,
+      "ra_unicos": 1156,
+      "ra_duplicados": 0,
+      "inde_numerico": 1054,
+      "inde_nao_numerico": 102,
+      "cabecalhos_duplicados": {
+        "Ativo/ Inativo": 2
+      }
+    }
+  },
+  "sobreposicao_ra": {
+    "2022_2023": 600,
+    "2022_2024": 472,
+    "2023_2024": 765,
+    "all3": 468
+  },
+  "verificacao_identidade": {
+    "2022_2023": {
+      "common": 600,
+      "name_differ": 0,
+      "age_delta_counts": {
+        "1": 492,
+        "0": 105,
+        "-3": 2,
+        "3": 1
+      },
+      "ingresso_differ": 0,
+      "gender_differ_after_normalization": 12,
+      "dob_year_error_samples": [],
+      "ingresso_examples": []
+    },
+    "2022_2024": {
+      "common": 472,
+      "name_differ": 0,
+      "age_delta_counts": {
+        "2": 395,
+        "1": 71,
+        "3": 3,
+        "-2": 2,
+        "4": 1
+      },
+      "ingresso_differ": 192,
+      "gender_differ_after_normalization": 10,
+      "dob_year_error_samples": [],
+      "ingresso_examples": [
+        [
+          "RA-175",
+          2018,
+          2021
+        ],
+        [
+          "RA-81",
+          2017,
+          2021
+        ],
+        [
+          "RA-35",
+          2019,
+          2021
+        ],
+        [
+          "RA-555",
+          2019,
+          2021
+        ],
+        [
+          "RA-170",
+          2018,
+          2021
+        ]
+      ]
+    },
+    "2023_2024": {
+      "common": 765,
+      "name_differ": 0,
+      "age_delta_counts": {
+        "1": 744,
+        "2": 20,
+        "3": 1
+      },
+      "ingresso_differ": 199,
+      "gender_differ_after_normalization": 0,
+      "dob_year_error_samples": [],
+      "ingresso_examples": [
+        [
+          "RA-175",
+          2018,
+          2021
+        ],
+        [
+          "RA-81",
+          2017,
+          2021
+        ],
+        [
+          "RA-35",
+          2019,
+          2021
+        ],
+        [
+          "RA-555",
+          2019,
+          2021
+        ],
+        [
+          "RA-170",
+          2018,
+          2021
+        ]
+      ]
+    }
+  },
+  "observacoes": [
+    "O nome anonimizado e derivado do RA; concordancia de nomes nao prova identidade de modo independente",
+    "Valores invalidos de INDE 2024 concentram-se nas fases 8 e codigo 9",
+    "Fase 9 nao tem semantica confirmada",
+    "2022 nao tem coluna numerica independente IPP",
+    "Campo Atingiu PV indisponivel em 2023 e 2024",
+    "Relatorios de atividades e PEDE podem utilizar populacoes/escopos distintos"
+  ],
+  "inde_2023_invalidos_por_fase": {
+    "FASE 2": 1,
+    "FASE 4": 6,
+    "FASE 7": 13,
+    "FASE 8": 63
+  },
+  "inde_2024_invalidos_por_fase": {
+    "FASE 8": 64,
+    "CODIGO 9": 38
+  }
+}
