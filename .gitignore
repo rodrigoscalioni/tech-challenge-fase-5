@@ -1,0 +1,34 @@
+# Dados PEDE: nunca versionar registros individuais
+/data/raw/
+/data/bronze/
+/data/silver/
+/data/gold/
+*.xlsx
+*.xls
+*.parquet
+*.delta
+*.db
+*.sqlite
+
+# Credenciais / ambiente
+.env
+.env.*
+!.env.example
+.databrickscfg
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.ipynb_checkpoints/
+.coverage
+
+# IDE / Sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
