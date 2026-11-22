@@ -1,0 +1,141 @@
+ano,posicao_coluna,coluna_origem,identificador_origem,campo_destino_proposto,grupo,tratamento,nulos_reais,erros_excel,ocorrencias_75,observacoes
+2022,1,RA,RA,ra,identificacao,padronizar_ou_restringir,0,0,0,Identificador anonimizado do estudante; validar RA por ano
+2022,2,Fase,Fase,fase_original,segmentacao,padronizar_ou_restringir,0,0,0,Fase conforme codificacao de cada ano; derivar fase_padronizada
+2022,3,Turma,Turma,turma_original,segmentacao,padronizar_ou_restringir,0,0,0,"Codigo da turma, nao confundir com fase"
+2022,4,Nome,Nome,nome_anonimizado,identificacao,padronizar_ou_restringir,0,0,0,Nome artificial relacionado ao RA; nao evidencia independente de identidade
+2022,5,Ano nasc,Ano nasc,ano_nascimento_origem,identificacao,padronizar_ou_restringir,0,0,0,"2022 traz ano, nao data completa"
+2022,6,Idade 22,Idade 22,idade,identificacao,padronizar_ou_restringir,0,0,0,Idade reportada no ano de 2022
+2022,7,Gênero,Gênero,genero_padronizado,segmentacao,padronizar_ou_restringir,0,0,0,Mapear Menina/Feminino e Menino/Masculino; sinalizar inconsistencias
+2022,8,Ano ingresso,Ano ingresso,ano_ingresso_reportado,historico,padronizar_ou_restringir,0,0,0,Nao reconciliar automaticamente; 2024 tem divergencias
+2022,9,Instituição de ensino,Instituição de ensino,tipo_instituicao,segmentacao,padronizar_ou_restringir,0,0,0,Padronizar categorias e preservar valor original
+2022,10,Pedra 20,Pedra 20,raw_pedra_20,historico_replicado,bronze_only,537,0,0,Historico replicado; preferir o registro da aba do proprio ano e desconsiderar sentinel 75
+2022,11,Pedra 21,Pedra 21,raw_pedra_21,historico_replicado,bronze_only,398,0,0,Historico replicado; preferir o registro da aba do proprio ano e desconsiderar sentinel 75
+2022,12,Pedra 22,Pedra 22,pedra,indicador,normalizar_validar,0,0,0,Campo corrente de 2022; fonte primaria para analise anual
+2022,13,INDE 22,INDE 22,inde,indicador,normalizar_validar,0,0,0,Campo corrente de 2022; fonte primaria para analise anual
+2022,14,Cg,Cg,raw_cg,historico_ou_bruto,bronze_only,0,0,1,"Conservar na Bronze; nao usar em Gold antes de validar representatividade, redundancia e semantica"
+2022,15,Cf,Cf,raw_cf,historico_ou_bruto,bronze_only,0,0,5,"Conservar na Bronze; nao usar em Gold antes de validar representatividade, redundancia e semantica"
+2022,16,Ct,Ct,raw_ct,historico_ou_bruto,bronze_only,0,0,0,"Conservar na Bronze; nao usar em Gold antes de validar representatividade, redundancia e semantica"
+2022,17,Nº Av,Nº Av,numero_avaliacoes,qualidade,padronizar_ou_restringir,0,0,0,Numero informado de avaliacoes; zero nao equivale a nota
+2022,18,Avaliador1,Avaliador1,raw_avaliador1,restrito,restrito_sem_genie,0,0,0,Dados de avaliacao e recomendacoes; preservar sob acesso restrito
+2022,19,Rec Av1,Rec Av1,raw_rec_av1,restrito,restrito_sem_genie,0,0,0,Dados de avaliacao e recomendacoes; preservar sob acesso restrito
+2022,20,Avaliador2,Avaliador2,raw_avaliador2,restrito,restrito_sem_genie,0,0,0,Dados de avaliacao e recomendacoes; preservar sob acesso restrito
+2022,21,Rec Av2,Rec Av2,raw_rec_av2,restrito,restrito_sem_genie,0,0,0,Dados de avaliacao e recomendacoes; preservar sob acesso restrito
+2022,22,Avaliador3,Avaliador3,raw_avaliador3,restrito,restrito_sem_genie,326,0,0,Dados de avaliacao e recomendacoes; preservar sob acesso restrito
+2022,23,Rec Av3,Rec Av3,raw_rec_av3,restrito,restrito_sem_genie,0,0,0,Dados de avaliacao e recomendacoes; preservar sob acesso restrito
+2022,24,Avaliador4,Avaliador4,raw_avaliador4,restrito,restrito_sem_genie,550,0,0,Dados de avaliacao e recomendacoes; preservar sob acesso restrito
+2022,25,Rec Av4,Rec Av4,raw_rec_av4,restrito,restrito_sem_genie,564,0,0,Dados de avaliacao e recomendacoes; preservar sob acesso restrito
+2022,26,IAA,IAA,iaa,indicador,padronizar_ou_restringir,0,0,0,Autoavaliacao; respeitar ano e sinalizar escalas >10
+2022,27,IEG,IEG,ieg,indicador,padronizar_ou_restringir,0,0,0,Engajamento
+2022,28,IPS,IPS,ips,indicador,padronizar_ou_restringir,0,0,0,"Psicossocial; dados sensiveis, acesso agregado"
+2022,29,Rec Psicologia,Rec Psicologia,recomendacao_psicologia_restrita,restrito,restrito_sem_genie,0,0,0,Campo sensivel; nao expor no Genie nem em painel individual
+2022,30,IDA,IDA,ida,indicador,padronizar_ou_restringir,0,0,0,Desempenho academico; nao inferir nota quando ausente
+2022,31,Matem,Matem,nota_matematica,desempenho,padronizar_ou_restringir,2,0,0,Notas internas de matematica
+2022,32,Portug,Portug,nota_portugues,desempenho,padronizar_ou_restringir,2,0,0,Notas internas de portugues
+2022,33,Inglês,Inglês,nota_ingles,desempenho,padronizar_ou_restringir,577,0,0,Nota interna de ingles; nao aplicavel a todas as fases
+2022,34,Indicado,Indicado,indicado_bolsa,resultado,padronizar_ou_restringir,0,0,0,Preenchido apenas em 2022
+2022,35,Atingiu PV,Atingiu PV,atingiu_ponto_virada,indicador,padronizar_ou_restringir,0,0,0,Booleano de 2022; ausente nos demais anos
+2022,36,IPV,IPV,ipv,indicador,padronizar_ou_restringir,0,0,0,Ponto de virada numerico; diferente de Atingiu PV
+2022,37,IAN,IAN,ian,indicador,padronizar_ou_restringir,0,0,0,Adequacao ao nivel
+2022,38,Fase ideal,Fase ideal,fase_ideal_original,defasagem,padronizar_ou_restringir,0,0,0,Derivar numero da fase ideal a partir do texto
+2022,39,Defas,Defas,defasagem_original,defasagem,padronizar_ou_restringir,0,0,0,Defasagem = fase efetiva menos fase ideal
+2022,40,Destaque IEG,Destaque IEG,destaque_ieg_restrito,restrito,restrito_sem_genie,0,0,0,Texto livre; nao expor ao Genie no MVP
+2022,41,Destaque IDA,Destaque IDA,destaque_ida_restrito,restrito,restrito_sem_genie,0,0,0,Texto livre; nao expor ao Genie no MVP
+2022,42,Destaque IPV,Destaque IPV,destaque_ipv_restrito,restrito,restrito_sem_genie,0,0,0,Texto livre; nao expor ao Genie no MVP
+2023,1,RA,RA,ra,identificacao,padronizar_ou_restringir,0,0,0,Identificador anonimizado do estudante; validar RA por ano
+2023,2,Fase,Fase,fase_original,segmentacao,padronizar_ou_restringir,0,0,0,Fase conforme codificacao de cada ano; derivar fase_padronizada
+2023,3,INDE 2023,INDE 2023,inde,indicador,normalizar_validar,0,83,0,Campo corrente de 2023; fonte primaria para analise anual
+2023,4,Pedra 2023,Pedra 2023,pedra,indicador,normalizar_validar,0,83,0,Campo corrente de 2023; fonte primaria para analise anual
+2023,5,Turma,Turma,turma_original,segmentacao,padronizar_ou_restringir,0,0,0,"Codigo da turma, nao confundir com fase"
+2023,6,Nome Anonimizado,Nome Anonimizado,nome_anonimizado,identificacao,padronizar_ou_restringir,0,0,0,Nome artificial relacionado ao RA; nao evidencia independente de identidade
+2023,7,Data de Nasc,Data de Nasc,data_nascimento_origem,identificacao,padronizar_ou_restringir,0,0,0,2023-24 formatos mistos: string e serial Excel
+2023,8,Idade,Idade,idade,identificacao,padronizar_ou_restringir,0,0,0,Idade reportada no ano correspondente
+2023,9,Gênero,Gênero,genero_padronizado,segmentacao,padronizar_ou_restringir,0,0,0,Mapear Menina/Feminino e Menino/Masculino; sinalizar inconsistencias
+2023,10,Ano ingresso,Ano ingresso,ano_ingresso_reportado,historico,padronizar_ou_restringir,0,0,0,Nao reconciliar automaticamente; 2024 tem divergencias
+2023,11,Instituição de ensino,Instituição de ensino,tipo_instituicao,segmentacao,padronizar_ou_restringir,0,0,0,Padronizar categorias e preservar valor original
+2023,12,Pedra 20,Pedra 20,raw_pedra_20,historico_replicado,bronze_only,774,0,0,Historico replicado; preferir o registro da aba do proprio ano e desconsiderar sentinel 75
+2023,13,Pedra 21,Pedra 21,raw_pedra_21,historico_replicado,bronze_only,679,0,0,Historico replicado; preferir o registro da aba do proprio ano e desconsiderar sentinel 75
+2023,14,Pedra 22,Pedra 22,raw_pedra_22,historico_replicado,bronze_only,414,0,0,Historico replicado; preferir o registro da aba do proprio ano e desconsiderar sentinel 75
+2023,15,Pedra 23,Pedra 23,raw_pedra_23,historico_replicado,bronze_only,1014,0,0,Historico replicado; preferir o registro da aba do proprio ano e desconsiderar sentinel 75
+2023,16,INDE 22,INDE 22,raw_inde_22,historico_replicado,bronze_only,414,0,0,Historico replicado; preferir o registro da aba do proprio ano e desconsiderar sentinel 75
+2023,17,INDE 23,INDE 23,raw_inde_23,historico_replicado,bronze_only,1014,0,0,Historico replicado; preferir o registro da aba do proprio ano e desconsiderar sentinel 75
+2023,18,Cg,Cg,raw_cg,historico_ou_bruto,bronze_only,1014,0,0,"Conservar na Bronze; nao usar em Gold antes de validar representatividade, redundancia e semantica"
+2023,19,Cf,Cf,raw_cf,historico_ou_bruto,bronze_only,1014,0,0,"Conservar na Bronze; nao usar em Gold antes de validar representatividade, redundancia e semantica"
+2023,20,Ct,Ct,raw_ct,historico_ou_bruto,bronze_only,1014,0,0,"Conservar na Bronze; nao usar em Gold antes de validar representatividade, redundancia e semantica"
+2023,21,Nº Av,Nº Av,numero_avaliacoes,qualidade,padronizar_ou_restringir,76,0,0,Numero informado de avaliacoes; zero nao equivale a nota
+2023,22,Avaliador1,Avaliador1,raw_avaliador1,restrito,restrito_sem_genie,76,0,0,Dados de avaliacao e recomendacoes; preservar sob acesso restrito
+2023,23,Rec Av1,Rec Av1,raw_rec_av1,restrito,restrito_sem_genie,1014,0,0,Dados de avaliacao e recomendacoes; preservar sob acesso restrito
+2023,24,Avaliador2,Avaliador2,raw_avaliador2,restrito,restrito_sem_genie,76,0,0,Dados de avaliacao e recomendacoes; preservar sob acesso restrito
+2023,25,Rec Av2,Rec Av2,raw_rec_av2,restrito,restrito_sem_genie,1014,0,0,Dados de avaliacao e recomendacoes; preservar sob acesso restrito
+2023,26,Avaliador3,Avaliador3,raw_avaliador3,restrito,restrito_sem_genie,76,0,231,Dados de avaliacao e recomendacoes; preservar sob acesso restrito
+2023,27,Rec Av3,Rec Av3,raw_rec_av3,restrito,restrito_sem_genie,1014,0,0,Dados de avaliacao e recomendacoes; preservar sob acesso restrito
+2023,28,Avaliador4,Avaliador4,raw_avaliador4,restrito,restrito_sem_genie,76,0,604,Dados de avaliacao e recomendacoes; preservar sob acesso restrito
+2023,29,Rec Av4,Rec Av4,raw_rec_av4,restrito,restrito_sem_genie,1014,0,0,Dados de avaliacao e recomendacoes; preservar sob acesso restrito
+2023,30,IAA,IAA,iaa,indicador,padronizar_ou_restringir,63,0,0,Autoavaliacao; respeitar ano e sinalizar escalas >10
+2023,31,IEG,IEG,ieg,indicador,padronizar_ou_restringir,76,0,0,Engajamento
+2023,32,IPS,IPS,ips,indicador,padronizar_ou_restringir,0,69,0,"Psicossocial; dados sensiveis, acesso agregado"
+2023,33,IPP,IPP,ipp,indicador,padronizar_ou_restringir,0,76,0,Psicopedagogico; ausente como coluna numerica em 2022
+2023,34,Rec Psicologia,Rec Psicologia,recomendacao_psicologia_restrita,restrito,restrito_sem_genie,1014,0,0,Campo sensivel; nao expor no Genie nem em painel individual
+2023,35,IDA,IDA,ida,indicador,padronizar_ou_restringir,76,1,0,Desempenho academico; nao inferir nota quando ausente
+2023,36,Mat,Mat,nota_matematica,desempenho,padronizar_ou_restringir,77,0,0,Notas internas de matematica
+2023,37,Por,Por,nota_portugues,desempenho,padronizar_ou_restringir,77,0,0,Notas internas de portugues
+2023,38,Ing,Ing,nota_ingles,desempenho,padronizar_ou_restringir,680,0,0,Nota interna de ingles; nao aplicavel a todas as fases
+2023,39,Indicado,Indicado,indicado_bolsa,resultado,padronizar_ou_restringir,1014,0,0,Preenchido apenas em 2022
+2023,40,Atingiu PV,Atingiu PV,atingiu_ponto_virada,indicador,padronizar_ou_restringir,1014,0,0,Booleano de 2022; ausente nos demais anos
+2023,41,IPV,IPV,ipv,indicador,padronizar_ou_restringir,0,76,0,Ponto de virada numerico; diferente de Atingiu PV
+2023,42,IAN,IAN,ian,indicador,padronizar_ou_restringir,0,0,0,Adequacao ao nivel
+2023,43,Fase Ideal,Fase Ideal,fase_ideal_original,defasagem,padronizar_ou_restringir,0,0,0,Derivar numero da fase ideal a partir do texto
+2023,44,Defasagem,Defasagem,defasagem_original,defasagem,padronizar_ou_restringir,0,0,0,Defasagem = fase efetiva menos fase ideal
+2023,45,Destaque IEG,Destaque IEG,destaque_ieg_restrito,restrito,restrito_sem_genie,1014,0,0,Texto livre; nao expor ao Genie no MVP
+2023,46,Destaque IDA,Destaque IDA,destaque_ida_restrito,restrito,restrito_sem_genie,1014,0,0,Texto livre; nao expor ao Genie no MVP
+2023,47,Destaque IPV,Destaque IPV [47],destaque_ipv_restrito,restrito,restrito_sem_genie,1014,0,0,Texto livre; nao expor ao Genie no MVP
+2023,48,Destaque IPV,Destaque IPV [48],destaque_ipv_restrito,restrito,restrito_sem_genie,1014,0,0,Texto livre; nao expor ao Genie no MVP
+2024,1,RA,RA,ra,identificacao,padronizar_ou_restringir,0,0,0,Identificador anonimizado do estudante; validar RA por ano
+2024,2,Fase,Fase,fase_original,segmentacao,padronizar_ou_restringir,0,0,0,Fase conforme codificacao de cada ano; derivar fase_padronizada
+2024,3,INDE 2024,INDE 2024,inde,indicador,normalizar_validar,0,64,0,Campo corrente de 2024; fonte primaria para analise anual
+2024,4,Pedra 2024,Pedra 2024,pedra,indicador,normalizar_validar,0,64,0,Campo corrente de 2024; fonte primaria para analise anual
+2024,5,Turma,Turma,turma_original,segmentacao,padronizar_ou_restringir,0,0,0,"Codigo da turma, nao confundir com fase"
+2024,6,Nome Anonimizado,Nome Anonimizado,nome_anonimizado,identificacao,padronizar_ou_restringir,0,0,0,Nome artificial relacionado ao RA; nao evidencia independente de identidade
+2024,7,Data de Nasc,Data de Nasc,data_nascimento_origem,identificacao,padronizar_ou_restringir,0,0,0,2023-24 formatos mistos: string e serial Excel
+2024,8,Idade,Idade,idade,identificacao,padronizar_ou_restringir,0,0,0,Idade reportada no ano correspondente
+2024,9,Gênero,Gênero,genero_padronizado,segmentacao,padronizar_ou_restringir,0,0,0,Mapear Menina/Feminino e Menino/Masculino; sinalizar inconsistencias
+2024,10,Ano ingresso,Ano ingresso,ano_ingresso_reportado,historico,padronizar_ou_restringir,0,0,0,Nao reconciliar automaticamente; 2024 tem divergencias
+2024,11,Instituição de ensino,Instituição de ensino,tipo_instituicao,segmentacao,padronizar_ou_restringir,1,0,0,Padronizar categorias e preservar valor original
+2024,12,Pedra 20,Pedra 20,raw_pedra_20,historico_replicado,bronze_only,281,0,684,Historico replicado; preferir o registro da aba do proprio ano e desconsiderar sentinel 75
+2024,13,Pedra 21,Pedra 21,raw_pedra_21,historico_replicado,bronze_only,208,0,684,Historico replicado; preferir o registro da aba do proprio ano e desconsiderar sentinel 75
+2024,14,Pedra 22,Pedra 22,raw_pedra_22,historico_replicado,bronze_only,0,0,684,Historico replicado; preferir o registro da aba do proprio ano e desconsiderar sentinel 75
+2024,15,Pedra 23,Pedra 23,raw_pedra_23,historico_replicado,bronze_only,0,75,391,Historico replicado; preferir o registro da aba do proprio ano e desconsiderar sentinel 75
+2024,16,INDE 22,INDE 22,raw_inde_22,historico_replicado,bronze_only,0,0,684,Historico replicado; preferir o registro da aba do proprio ano e desconsiderar sentinel 75
+2024,17,INDE 23,INDE 23,raw_inde_23,historico_replicado,bronze_only,0,75,391,Historico replicado; preferir o registro da aba do proprio ano e desconsiderar sentinel 75
+2024,18,Cg,Cg,raw_cg,historico_ou_bruto,bronze_only,1156,0,0,"Conservar na Bronze; nao usar em Gold antes de validar representatividade, redundancia e semantica"
+2024,19,Cf,Cf,raw_cf,historico_ou_bruto,bronze_only,1156,0,0,"Conservar na Bronze; nao usar em Gold antes de validar representatividade, redundancia e semantica"
+2024,20,Ct,Ct,raw_ct,historico_ou_bruto,bronze_only,1156,0,0,"Conservar na Bronze; nao usar em Gold antes de validar representatividade, redundancia e semantica"
+2024,21,Nº Av,Nº Av,numero_avaliacoes,qualidade,padronizar_ou_restringir,0,0,0,Numero informado de avaliacoes; zero nao equivale a nota
+2024,22,Avaliador1,Avaliador1,raw_avaliador1,restrito,restrito_sem_genie,127,0,0,Dados de avaliacao e recomendacoes; preservar sob acesso restrito
+2024,23,Rec Av1,Rec Av1,raw_rec_av1,restrito,restrito_sem_genie,1156,0,0,Dados de avaliacao e recomendacoes; preservar sob acesso restrito
+2024,24,Avaliador2,Avaliador2,raw_avaliador2,restrito,restrito_sem_genie,127,0,0,Dados de avaliacao e recomendacoes; preservar sob acesso restrito
+2024,25,Rec Av2,Rec Av2,raw_rec_av2,restrito,restrito_sem_genie,1156,0,0,Dados de avaliacao e recomendacoes; preservar sob acesso restrito
+2024,26,Avaliador3,Avaliador3,raw_avaliador3,restrito,restrito_sem_genie,39,0,324,Dados de avaliacao e recomendacoes; preservar sob acesso restrito
+2024,27,Avaliador4,Avaliador4,raw_avaliador4,restrito,restrito_sem_genie,64,0,685,Dados de avaliacao e recomendacoes; preservar sob acesso restrito
+2024,28,Avaliador5,Avaliador5,raw_avaliador5,restrito,restrito_sem_genie,70,0,938,Dados de avaliacao e recomendacoes; preservar sob acesso restrito
+2024,29,Avaliador6,Avaliador6,raw_avaliador6,restrito,restrito_sem_genie,40,0,1110,Dados de avaliacao e recomendacoes; preservar sob acesso restrito
+2024,30,IAA,IAA,iaa,indicador,padronizar_ou_restringir,0,0,102,Autoavaliacao; respeitar ano e sinalizar escalas >10
+2024,31,IEG,IEG,ieg,indicador,padronizar_ou_restringir,0,0,0,Engajamento
+2024,32,IPS,IPS,ips,indicador,padronizar_ou_restringir,0,102,0,"Psicossocial; dados sensiveis, acesso agregado"
+2024,33,IPP,IPP,ipp,indicador,padronizar_ou_restringir,0,102,0,Psicopedagogico; ausente como coluna numerica em 2022
+2024,34,Rec Psicologia,Rec Psicologia,recomendacao_psicologia_restrita,restrito,restrito_sem_genie,1156,0,0,Campo sensivel; nao expor no Genie nem em painel individual
+2024,35,IDA,IDA,ida,indicador,padronizar_ou_restringir,0,101,0,Desempenho academico; nao inferir nota quando ausente
+2024,36,Mat,Mat,nota_matematica,desempenho,padronizar_ou_restringir,0,0,105,Notas internas de matematica
+2024,37,Por,Por,nota_portugues,desempenho,padronizar_ou_restringir,0,0,106,Notas internas de portugues
+2024,38,Ing,Ing,nota_ingles,desempenho,padronizar_ou_restringir,0,0,682,Nota interna de ingles; nao aplicavel a todas as fases
+2024,39,Indicado,Indicado,indicado_bolsa,resultado,padronizar_ou_restringir,1156,0,0,Preenchido apenas em 2022
+2024,40,Atingiu PV,Atingiu PV,atingiu_ponto_virada,indicador,padronizar_ou_restringir,1156,0,0,Booleano de 2022; ausente nos demais anos
+2024,41,IPV,IPV,ipv,indicador,padronizar_ou_restringir,0,102,0,Ponto de virada numerico; diferente de Atingiu PV
+2024,42,IAN,IAN,ian,indicador,padronizar_ou_restringir,0,0,0,Adequacao ao nivel
+2024,43,Fase Ideal,Fase Ideal,fase_ideal_original,defasagem,padronizar_ou_restringir,0,0,0,Derivar numero da fase ideal a partir do texto
+2024,44,Defasagem,Defasagem,defasagem_original,defasagem,padronizar_ou_restringir,0,0,0,Defasagem = fase efetiva menos fase ideal
+2024,45,Destaque IEG,Destaque IEG,destaque_ieg_restrito,restrito,restrito_sem_genie,1156,0,0,Texto livre; nao expor ao Genie no MVP
+2024,46,Destaque IDA,Destaque IDA,destaque_ida_restrito,restrito,restrito_sem_genie,1156,0,0,Texto livre; nao expor ao Genie no MVP
+2024,47,Destaque IPV,Destaque IPV,destaque_ipv_restrito,restrito,restrito_sem_genie,1156,0,0,Texto livre; nao expor ao Genie no MVP
+2024,48,Escola,Escola,escola_original_restrita,restrito,restrito_sem_genie,1,0,0,Escola nominal em 2024; usar somente agregacoes seguras
+2024,49,Ativo/ Inativo,Ativo/ Inativo [49],raw_ativo_inativo,duplicado,bronze_only,0,0,0,Coluna duplicada de 2024 (conteudo Cursando); resolver apos validar regra de negocio
+2024,50,Ativo/ Inativo,Ativo/ Inativo [50],raw_ativo_inativo,duplicado,bronze_only,0,0,0,Coluna duplicada de 2024 (conteudo Cursando); resolver apos validar regra de negocio
