@@ -1,5 +1,9 @@
 # Scripts de preparação
 
-Nesta pasta ficarão os scripts locais para leitura e exportação da única planilha Excel, preservação dos dados e verificação dos controles de ingestão.
+O script [`exportar_excel.py`](exportar_excel.py) exporta as três abas do Excel original para CSVs na pasta restrita `data/raw/export/`, preservando tipos textuais de origem, erros Excel e cabeçalhos duplicados com mapeamento posicional.
 
-**Planejado:** `exportar_excel.py` com nomes de colunas duplicados preservados por posição, fonte/aba/linha e tratamento das células de erro. Não utilizar `pandas.read_excel` sem tratamento explícito de cabeçalhos duplicados.
+```bash
+python scripts/exportar_excel.py --input "data/raw/BASE DE DADOS PEDE 2024 - DATATHON.xlsx" --output data/raw/export
+```
+
+Os CSVs e o manifest são **restritos** e não devem ser publicados. Consulte [o guia de ingestão](../docs/MARCO2_INGESTAO_BRONZE.md).
