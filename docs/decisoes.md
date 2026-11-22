@@ -14,4 +14,6 @@
 | D10 | Benchmark do Genie com consultas SQL | Planejada | Pelo menos cinco perguntas validadas |
 | D11 | Revisão editorial do repositório após conclusão de todos os marcos | Planejada | Apresentação end-to-end, não por etapas; preservar histórico técnico de commits |
 
-**Próxima revisão:** implementar exportação local e testes de contagem/colunas e atualizar o contrato a partir dos resultados.
+| D12 | Exportação OOXML por posição com CSVs textuais e manifest de hashes | Implementada, testes locais executados | [Marco 2](MARCO2_INGESTAO_BRONZE.md); upload e execução Databricks pendentes |
+
+**Próxima revisão:** executar o notebook Bronze no Databricks, registrar evidências agregadas e iniciar a Silver.
