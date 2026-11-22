@@ -1,5 +1,11 @@
 # Testes e validações
 
-Critérios mínimos: contagens por ano (860, 1.014, 1.156), unicidade `(RA, ano)`, 468 RAs presentes nos três anos, total de INDE numérico (860, 931, 1.054), cabeçalhos duplicados, sentinelas não numéricas e reconciliação de métricas agregadas. Contagens são valores de referência da versão inicial do diagnóstico.
+[`test_exportar_excel.py`](test_exportar_excel.py) utiliza planilha XLSX sintética criada em memória, sem dados de alunos, para verificar cabeçalhos repetidos, erros Excel, números como texto, CSV multilinha e rejeição de fórmulas.
 
-A pasta `genie/` receberá perguntas, SQL de referência, resultado obtido e evidências dos benchmarks.
+```bash
+python -m pytest -q tests/test_exportar_excel.py
+```
+
+**Teste local executado:** 4 testes passaram. Os controles do Excel real (860 / 1.014 / 1.156 linhas e 42 / 48 / 50 colunas) foram reconciliados na exportação local. A validação das tabelas Delta no Databricks ainda depende da execução do notebook.
+
+Na Silver/Gold acrescentaremos regras de unicidade `(RA, ano)`, valores inválidos, normalização, reconciliação de métricas e benchmarks SQL do Genie.
