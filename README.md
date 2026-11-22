@@ -2,7 +2,7 @@
 
 Projeto de Engenharia de Dados e Analytics para investigar o desenvolvimento educacional dos estudantes da **Associação Passos Mágicos**, com processamento no **Databricks**, visualização em **AI/BI Dashboard** e exploração em linguagem natural usando **Databricks Genie**.
 
-> **Status:** fundação de dados (Marco 1) documentada; pipeline Databricks ainda não implementado.
+> **Status:** Marco 1 documentado; exportador e notebook Bronze do Marco 2 implementados e exportação local testada. Execução no workspace Databricks ainda pendente.
 > Os achados iniciais e as regras de tratamento são **propostas em validação**, não indicadores oficiais da associação.
 
 ## Fonte de dados
@@ -63,12 +63,13 @@ Databricks Gold — métricas e visões analíticas verificadas
 - [Contrato de dados v0.1](docs/marco1/contrato_dados.json)
 - [Diagnóstico de qualidade](docs/marco1/resumo_qualidade.json)
 - [Arquitetura proposta](docs/arquitetura.md)
+- [Guia de exportação e ingestão Bronze](docs/MARCO2_INGESTAO_BRONZE.md)
 - [Decisões e pendências](docs/decisoes.md)
 
 ## Roadmap
 
 - [x] **Marco 1 —** Diagnóstico inicial e contrato de dados preliminar
-- [ ] **Marco 2 —** Preparação da planilha e ingestão Bronze
+- [ ] **Marco 2 —** Preparação da planilha e ingestão Bronze (**exportação local e código concluídos; carga Databricks pendente**)
 - [ ] **Marco 3 —** Tratamento Silver e testes automatizados
 - [ ] **Marco 4 —** Consultas analíticas e visões Gold
 - [ ] **Marco 5 —** AI/BI Dashboard
@@ -80,8 +81,9 @@ Databricks Gold — métricas e visões analíticas verificadas
 
 1. Obtenha a planilha original pelos materiais autorizados do desafio; **não faça commit dela**.
 2. Consulte o [contrato de dados](docs/marco1/contrato_dados.json) e as [regras de negócio](docs/marco1/MARCO1_FUNDACAO_DADOS.md).
-3. Prepare um workspace Databricks e os arquivos de ingestão locais (procedimento a implementar em `scripts/`).
-4. Execute os notebooks na ordem Bronze → Silver → Gold, quando disponibilizados.
+3. Execute [`scripts/exportar_excel.py`](scripts/exportar_excel.py) localmente para gerar três CSVs e um manifest em `data/raw/export/` (ignorado pelo Git).
+4. Faça o upload dos quatro arquivos em um Volume do Unity Catalog e execute [`notebooks/01_ingestao_bronze.py`](notebooks/01_ingestao_bronze.py).
+5. Siga as [instruções e verificações do Marco 2](docs/MARCO2_INGESTAO_BRONZE.md). Silver e Gold ainda serão implementadas.
 
 > **Nota metodológica:** diferenças entre anos podem refletir mudanças de população ou na definição dos indicadores. Resultados de associação não demonstram, por si só, causalidade.
 
