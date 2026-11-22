@@ -1,0 +1,119 @@
+{
+  "id": "fase5_pede_contrato_v0.1",
+  "status": "proposta_a_validar",
+  "source": {
+    "arquivo": "BASE DE DADOS PEDE 2024 - DATATHON.xlsx",
+    "abas": {
+      "PEDE2022": 2022,
+      "PEDE2023": 2023,
+      "PEDE2024": 2024
+    },
+    "documentos_contexto": [
+      "Relatórios PEDE 2020-2022",
+      "Relatórios de atividades 2020-2023",
+      "Dicionário Dados Datathon.pdf",
+      "PEDE_ Pontos importantes.docx"
+    ]
+  },
+  "grao_gold": "um estudante (RA) em um ano de observação (2022/2023/2024)",
+  "chave": [
+    "ra",
+    "ano"
+  ],
+  "tabelas_propostas": {
+    "bronze_pede_2022": "copia sem alteracoes dos valores de 2022 com metadados",
+    "bronze_pede_2023": "copia sem alteracoes dos valores de 2023 com metadados",
+    "bronze_pede_2024": "copia sem alteracoes dos valores de 2024 com metadados",
+    "silver_aluno_ano": "dados correntes consolidados; campos padronizados, origem e flags de qualidade",
+    "gold_kpis_anuais": "agregacoes por ano, grupo e disponibilidade",
+    "gold_evolucao_coortes": "medidas entre alunos compartilhados nos dois/três anos",
+    "gold_transicoes_pedras": "classificacoes originais e transicao por RA/ano",
+    "gold_genie": "somente campos agregaveis e descricoes semanticas, sem dados sensiveis em texto livre"
+  },
+  "normalizacao": {
+    "fase": {
+      "2022": "0..7; 0=alfabetizacao",
+      "2023": "ALFA, FASE 1..FASE 8",
+      "2024": "ALFA, codigos de turma com prefixos 1..8 e codigo 9 separado; 9 nao mapeado para Fase 8"
+    },
+    "genero": {
+      "Menina": "Feminino",
+      "Menino": "Masculino",
+      "Feminino": "Feminino",
+      "Masculino": "Masculino"
+    },
+    "pedra": {
+      "Agata": "Ágata",
+      "Ágata": "Ágata",
+      "Ametista": "Ametista",
+      "Quartzo": "Quartzo",
+      "Topázio": "Topázio"
+    },
+    "indicadores": "preservar valores numericos brutos com precisao; criar campo validado e flag; nao imputar automaticamente",
+    "metrica_inde": "usar apenas coluna do proprio ano; nao priorizar os historicos copiados em outras abas",
+    "valores_ausentes": [
+      "#DIV/0!",
+      "#N/A",
+      "INCLUIR",
+      "branco",
+      "None"
+    ],
+    "sentinel_75": {
+      "interpretacao": "invalido para notas, indicadores, INDE e pedras onde aparece como marcador; nunca normalizar para 7.5",
+      "ocorrencias_relevantes_2024": {
+        "Pedra 22": 684,
+        "INDE 22": 684,
+        "Pedra 23": 391,
+        "INDE 23": 391,
+        "IAA": 102,
+        "Mat": 105,
+        "Por": 106,
+        "Ing": 682
+      }
+    },
+    "valores_ligeiramente_acima_10": "nao descartar sem diagnostico; preservar como bruto e sinalizar para revisao de calculo/arredondamento"
+  },
+  "validacoes_obrigatorias": [
+    "RA informado e unico dentro de cada ano",
+    "unicidade de (ra,ano) na silver",
+    "linhas Bronze=fonte sem perdas",
+    "2024 fase 8/9 com INDE indisponivel como nulo, nao zero",
+    "flag nos codigos de fase desconhecidos",
+    "nao inverter o sinal de defasagem",
+    "ano ingresso divergente entre anos gera flag, sem overwrite",
+    "mudancas de idade anomalas geram flag",
+    "genero divergente gera flag",
+    "excluir campos restritos do Genie",
+    "tabelas Gold com denominador de indicadores validos e numerador explicito"
+  ],
+  "estimativas_de_controle": {
+    "linhas": {
+      "2022": 860,
+      "2023": 1014,
+      "2024": 1156
+    },
+    "inde_valido": {
+      "2022": 860,
+      "2023": 931,
+      "2024": 1054
+    },
+    "ra_em_comum": {
+      "2022_2023": 600,
+      "2023_2024": 765,
+      "2022_2024": 472,
+      "tres_anos": 468
+    }
+  },
+  "semantica_restricoes": {
+    "impacto": "associacao observacional; nao concluir causalidade sem grupo comparador e desenho apropriado",
+    "genie": "nao expor identificadores individuais ou recomendacoes psicossociais; prevenir grupos com poucas observacoes"
+  },
+  "pendencias": [
+    "confirmar o significado da Fase 9 em 2024",
+    "confirmar calculo ou arredondamento de indicadores ligeiramente >10",
+    "confirmar politica para classificacao de pedras ao longo dos anos",
+    "validar a correspondencia dos RAs com a documentacao, pois Nome Anonimizado e derivado de RA",
+    "decidir regra de reconciliacao do Ano ingresso",
+    "confirmar tratamento de Fase 8 e seus indicadores indisponiveis"
+  ]
+}
