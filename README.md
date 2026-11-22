@@ -74,6 +74,7 @@ Databricks Gold — métricas e visões analíticas verificadas
 - [ ] **Marco 5 —** AI/BI Dashboard
 - [ ] **Marco 6 —** Genie e validação de perguntas contra SQL
 - [ ] **Marco 7 —** Storytelling, apresentação e entrega
+- [ ] **Marco 8 —** Revisão editorial final do GitHub: narrativa contínua da solução, links, execução ponta a ponta e limpeza de conteúdos temporários
 
 ## Como iniciar
 
