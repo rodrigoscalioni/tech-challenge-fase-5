@@ -12,5 +12,6 @@
 | D08 | Ano de ingresso divergente entre observações | Pendente | Investigar 199 RAs entre 2023/2024 |
 | D09 | Não publicar Excel bruto no repositório público | Adotada | Dados individuais de estudantes |
 | D10 | Benchmark do Genie com consultas SQL | Planejada | Pelo menos cinco perguntas validadas |
+| D11 | Revisão editorial do repositório após conclusão de todos os marcos | Planejada | Apresentação end-to-end, não por etapas; preservar histórico técnico de commits |
 
 **Próxima revisão:** implementar exportação local e testes de contagem/colunas e atualizar o contrato a partir dos resultados.
